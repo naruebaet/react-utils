@@ -1,0 +1,41 @@
+{
+  "name": "react-utils",
+  "version": "1.0.0",
+  "description": "react component utility tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naruebaet/react-utils.git"
+  },
+  "keywords": [
+    "react",
+    "utils",
+    "tools"
+  ],
+  "author": "Naruebaet bouhom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naruebaet/react-utils/issues"
+  },
+  "homepage": "https://github.com/naruebaet/react-utils#readme",
+  "peerDependencies": {
+    "react": "^16.6.1",
+    "react-async": "^7.0.6",
+    "react-dom": "^16.6.3",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "lodash": "^4.17.15",
+    "react": "^16.9.0",
+    "react-async": "^7.0.6",
+    "react-dom": "^16.9.0"
+  }
+}
