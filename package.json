@@ -1,6 +1,6 @@
 {
   "name": "react-utility-component",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "react component utility tools",
   "main": "index.js",
   "scripts": {
