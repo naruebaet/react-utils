@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add react-async --dev
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add react-waypoint --dev
 
 PATH: 
   /usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:~/.composer/vendor/bin:/Users/naruebaetb/go/bin:/usr/local/go/bin:/Users/naruebaetb/go/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/naruebaetb/sites/react-utils/package.json: Unexpected token } in JSON at position 913
+  SyntaxError: /Users/naruebaetb/sites/react-utils/package.json: Unexpected token } in JSON at position 1065
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -23,8 +23,8 @@ Trace:
 
 npm manifest: 
   {
-    "name": "react-utils",
-    "version": "1.0.0",
+    "name": "react-utility-component",
+    "version": "1.0.2",
     "description": "react component utility tools",
     "main": "index.js",
     "scripts": {
@@ -37,8 +37,9 @@ npm manifest:
     },
     "keywords": [
       "react",
-      "utils",
-      "tools"
+      "react utility",
+      "tools",
+      "react components"
     ],
     "author": "Naruebaet bouhom",
     "license": "MIT",
@@ -47,7 +48,9 @@ npm manifest:
     },
     "homepage": "https://github.com/naruebaet/react-utils#readme",
     "peerDependencies": {
+      "lodash": "^4.17.15",
       "react": "^16.6.1",
+      "react-async": "^7.0.6",
       "react-dom": "^16.6.3"
     },
     "devDependencies": {
@@ -55,9 +58,11 @@ npm manifest:
       "@babel/core": "^7.5.5",
       "@babel/preset-env": "^7.5.5",
       "@babel/preset-react": "^7.0.0",
+      "lodash": "^4.17.15",
       "react": "^16.9.0",
+      "react-async": "^7.0.6",
       "react-dom": "^16.9.0"
-    },  
+    },
   }
 
 yarn manifest: 
@@ -1028,6 +1033,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
     integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
   
+  "consolidated-events@^1.1.0 || ^2.0.0":
+    version "2.0.2"
+    resolved "https://registry.yarnpkg.com/consolidated-events/-/consolidated-events-2.0.2.tgz#da8d8f8c2b232831413d9e190dc11669c79f4a91"
+    integrity sha512-2/uRVMdRypf5z/TW/ncD/66l75P5hH2vM/GR8Jf8HLc2xnfJtmina6F6du8+v4Z2vTrMo7jC+W1tmEEuuELgkQ==
+  
   convert-source-map@^1.1.0:
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.6.0.tgz#51b537a8c43e0f04dec1993bffcdd504e758ac20"
@@ -1559,7 +1569,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
     integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
   
-  lodash@^4.17.13:
+  lodash@^4.17.13, lodash@^4.17.15:
     version "4.17.15"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
     integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -1873,7 +1883,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
     integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
   
-  prop-types@^15.6.2:
+  prop-types@^15.0.0, prop-types@^15.6.2:
     version "15.7.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
     integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -1907,10 +1917,19 @@ Lockfile:
       prop-types "^15.6.2"
       scheduler "^0.15.0"
   
-  react-is@^16.8.1:
+  react-is@^16.6.3, react-is@^16.8.1:
     version "16.9.0"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
     integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
+  
+  react-waypoint@^9.0.2:
+    version "9.0.2"
+    resolved "https://registry.yarnpkg.com/react-waypoint/-/react-waypoint-9.0.2.tgz#d65fb0fe6ff5c1b832a1d01b1462a661fb921e45"
+    integrity sha512-6tIr9NozeDH789Ox2tOkyDcmprYOx1+eII40dERLrZclFe6RhWAQ/bbd6B7cGild6onXNwPzg16y0/wHWQ/q+g==
+    dependencies:
+      consolidated-events "^1.1.0 || ^2.0.0"
+      prop-types "^15.0.0"
+      react-is "^16.6.3"
   
   react@^16.9.0:
     version "16.9.0"

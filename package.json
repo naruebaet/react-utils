@@ -24,10 +24,11 @@
   },
   "homepage": "https://github.com/naruebaet/react-utils#readme",
   "peerDependencies": {
+    "lodash": "^4.17.15",
     "react": "^16.6.1",
     "react-async": "^7.0.6",
     "react-dom": "^16.6.3",
-    "lodash": "^4.17.15"
+    "react-waypoint": "^9.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -37,6 +38,7 @@
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-async": "^7.0.6",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-waypoint": "^9.0.2"
   }
 }
