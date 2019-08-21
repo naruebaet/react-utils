@@ -364,23 +364,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function Responsive(_ref) {
   var _ref$breakpoint = _ref.breakpoint,
       breakpoint = _ref$breakpoint === void 0 ? 'md' : _ref$breakpoint,
-      _ref$wide = _ref.wide,
-      wide = _ref$wide === void 0 ? null : _ref$wide,
-      _ref$narrow = _ref.narrow,
-      narrow = _ref$narrow === void 0 ? null : _ref$narrow;
+      _ref$wideScreen = _ref.wideScreen,
+      wideScreen = _ref$wideScreen === void 0 ? null : _ref$wideScreen,
+      _ref$narrowScreen = _ref.narrowScreen,
+      narrowScreen = _ref$narrowScreen === void 0 ? null : _ref$narrowScreen;
   return _react["default"].createElement(_react.Fragment, null, _react["default"].createElement("div", {
     css: _defineProperty({
       display: 'block'
     }, (0, _Helper.media)(breakpoint), {
       display: 'none'
     })
-  }, narrow), _react["default"].createElement("div", {
+  }, narrowScreen), _react["default"].createElement("div", {
     css: _defineProperty({
       display: 'none'
     }, (0, _Helper.media)(breakpoint), {
       display: 'block'
     })
-  }, wide));
+  }, wideScreen));
 }
 "use strict";
 
