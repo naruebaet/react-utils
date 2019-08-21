@@ -15,7 +15,12 @@
     "react",
     "react utility",
     "tools",
-    "react components"
+    "react components",
+    "responsive",
+    "fetch",
+    "adaptive",
+    "waypoint",
+    "inView"
   ],
   "author": "Naruebaet bouhom",
   "license": "MIT",
