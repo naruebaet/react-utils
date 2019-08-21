@@ -3,6 +3,18 @@
   "version": "1.1.4",
   "description": "react component utility tools",
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "git add",
+      "pretty-quick --staged"
+    ]
+  },
   "scripts": {
     "test": "echo \"no test specified\"",
     "build": "./node_modules/.bin/babel src --out-file index.js"
@@ -40,10 +52,17 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
     "lodash": "^4.17.15",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "react": "^16.9.0",
     "react-async": "^7.0.6",
     "react-dom": "^16.9.0",
     "react-waypoint": "^9.0.2"
-  }
+  },
+  "dependencies": {}
 }
