@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import { media } from './Helper';
 
-export function Responsive({ breakpoint = 'md', wide = null, narrow = null }) {
+export function Responsive({ breakpoint = 'md', wideScreen = null, narrowScreen = null }) {
     return (
         <Fragment>
             <div
@@ -12,7 +12,7 @@ export function Responsive({ breakpoint = 'md', wide = null, narrow = null }) {
                         display: 'none',
                     },
                 }}>
-                {narrow}
+                {narrowScreen}
             </div>
             <div
                 css={{
@@ -21,7 +21,7 @@ export function Responsive({ breakpoint = 'md', wide = null, narrow = null }) {
                         display: 'block',
                     },
                 }}>
-                {wide}
+                {wideScreen}
             </div>
         </Fragment>
     )
