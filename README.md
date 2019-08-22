@@ -42,6 +42,7 @@ export default class index extends Component {
     }
 }
 ```
+### And more components coming soon document....
 
 ## Inspire and extend from nextwebjs
 - https://suranartnc.github.io/nextweb/docs/getting-started/getting-started/
